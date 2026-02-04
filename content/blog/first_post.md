@@ -8,6 +8,6 @@ date: 2026-02-04
 
 # this is a heading with one '#'
 
-if you hate markdown, you can just write it as a plain text. It's just a
+if you hate markdown, you can just write it as a plain text. It's just a file
 
 <img src="https://creative-beast.com/wp-content/uploads/2022/04/xt7Iq5yuE37ZGbqzzjNlgusNxO6MyZXC1646919218.jpg">
