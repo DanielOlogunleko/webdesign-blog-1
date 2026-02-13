@@ -296,3 +296,68 @@ header {
 	margin-right: 1em;
 }
 
+/* =========================================================
+   Project 1: Custom homepage theme (additions)
+   ========================================================= */
+
+   body {
+	
+	max-width: 68rem; /* overrides the starter 40em */
+  }
+  
+  /* Homepage hero */
+  .home-hero {
+	max-width: 60rem;
+	margin: 3rem auto 1.5rem;
+	padding: 0 1rem;
+  }
+  
+  .home-title {
+	font-size: clamp(2.2rem, 4vw, 3.6rem);
+	margin: 0 0 0.75rem;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+  }
+  
+  .home-subtitle {
+	margin: 0;
+	max-width: 70ch;
+	line-height: 1.6;
+	opacity: 0.85;
+  }
+  
+  /* Homepage grid */
+  .home-grid {
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 0 1rem 3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1rem;
+  }
+  
+  .post-card {
+	display: block;
+	text-decoration: none;
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 1rem;
+  }
+  
+  .post-card-title {
+	margin: 0 0 0.5rem;
+	font-size: 1.2rem;
+	line-height: 1.2;
+  }
+  
+  .post-card-meta {
+	margin: 0;
+	opacity: 0.75;
+	font-size: 0.9rem;
+  }
+  
+  .post-card-excerpt {
+	margin: 0.75rem 0 0;
+	line-height: 1.6;
+	opacity: 0.9;
+  }
+  
