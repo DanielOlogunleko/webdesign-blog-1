@@ -295,6 +295,153 @@ header {
 .post-metadata time {
 	margin-right: 1em;
 }
+/* =========================================================
+   Project 1: Tech theme homepage styling (append)
+   ========================================================= */
+
+   :root {
+	--tech-bg: #0b0f14;
+	--tech-panel: rgba(255, 255, 255, 0.04);
+	--tech-border: rgba(255, 255, 255, 0.12);
+	--tech-text: rgba(255, 255, 255, 0.9);
+	--tech-muted: rgba(255, 255, 255, 0.65);
+	--tech-accent: #7cf7c6;
+	--tech-accent-2: #78a6ff;
+  }
+  
+  /* Make the whole site feel tech */
+  body {
+	max-width: 72rem; /* override starter 40em */
+	background:
+	  radial-gradient(1200px 600px at 20% -10%, rgba(124, 247, 198, 0.18), transparent 55%),
+	  radial-gradient(1000px 500px at 90% 0%, rgba(120, 166, 255, 0.14), transparent 55%),
+	  var(--tech-bg);
+	color: var(--tech-text);
+  }
+  
+  /* Links */
+  a[href] { color: var(--tech-accent-2); }
+  a[href]:visited { color: var(--tech-accent-2); }
+  a[href]:hover, a[href]:active { color: var(--tech-accent); }
+  
+  /* Header / nav */
+  header {
+	border-bottom: 1px solid var(--tech-border);
+	background: rgba(255,255,255,0.02);
+  }
+  
+  /* Tech hero */
+  .tech-hero {
+	max-width: 60rem;
+	margin: 2.5rem auto 1.5rem;
+	padding: 1.25rem;
+	border: 1px solid var(--tech-border);
+	background: var(--tech-panel);
+	backdrop-filter: blur(8px);
+  }
+  
+  .tech-kicker {
+	margin: 0 0 0.75rem;
+	font-family: var(--font-family-monospace, monospace);
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--tech-muted);
+	font-size: 0.85rem;
+  }
+  
+  .tech-title {
+	margin: 0 0 0.75rem;
+	font-size: clamp(2rem, 4vw, 3.25rem);
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+  }
+  
+  .tech-subtitle {
+	margin: 0 0 1rem;
+	max-width: 75ch;
+	color: var(--tech-muted);
+	line-height: 1.6;
+  }
+  
+  .tech-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+  }
+  
+  .tech-pill {
+	display: inline-flex;
+	align-items: center;
+	font-family: var(--font-family-monospace, monospace);
+	font-size: 0.85rem;
+	padding: 0.35rem 0.6rem;
+	border: 1px solid var(--tech-border);
+	background: rgba(255,255,255,0.03);
+  }
+  
+  /* Tech post grid */
+  .tech-grid {
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 0 0 3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1rem;
+  }
+  
+  .tech-card {
+	display: block;
+	text-decoration: none;
+	border: 1px solid var(--tech-border);
+	background: rgba(255,255,255,0.02);
+	padding: 1rem;
+  }
+  
+  .tech-card:hover {
+	border-color: rgba(124, 247, 198, 0.45);
+	background: rgba(255,255,255,0.04);
+  }
+  
+  .tech-card-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 0.75rem;
+  }
+  
+  .tech-chip {
+	font-family: var(--font-family-monospace, monospace);
+	font-size: 0.8rem;
+	padding: 0.2rem 0.5rem;
+	border: 1px solid rgba(124, 247, 198, 0.35);
+	color: var(--tech-accent);
+	background: rgba(124, 247, 198, 0.06);
+  }
+  
+  .tech-date {
+	font-family: var(--font-family-monospace, monospace);
+	font-size: 0.8rem;
+	color: var(--tech-muted);
+  }
+  
+  .tech-card-title {
+	margin: 0 0 0.5rem;
+	font-size: 1.15rem;
+	line-height: 1.25;
+	color: var(--tech-text);
+  }
+  
+  .tech-card-desc {
+	margin: 0;
+	opacity: 0.75;
+	font-size: 0.9rem;
+  }
+  
+  .post-card-excerpt {
+	margin: 0.75rem 0 0;
+	line-height: 1.6;
+  }
 /*
  * New diff- syntax
  */
@@ -340,3 +487,135 @@ pre[class*="language-diff-"] {
 	text-decoration: none; /* override del, ins, mark defaults */
 	color: inherit; /* override del, ins, mark defaults */
 }
+
+   .tech-post {
+	max-width: 75ch;
+	margin: 2.5rem auto 4rem;
+	padding: 1.25rem;
+	border: 1px solid rgba(255,255,255,0.12);
+	background: rgba(255,255,255,0.03);
+  }
+  
+  .tech-post-header {
+	padding-bottom: 1rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  
+  .tech-kicker {
+	margin: 0 0 0.75rem;
+	font-family: var(--font-family-monospace, monospace);
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	color: rgba(255,255,255,0.65);
+  }
+  
+  .tech-post-title {
+	margin: 0 0 0.75rem;
+	font-size: clamp(2rem, 3vw, 2.6rem);
+	line-height: 1.1;
+  }
+  
+  .tech-post-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1rem;
+	align-items: center;
+	font-family: var(--font-family-monospace, monospace);
+	font-size: 0.9rem;
+	color: rgba(255,255,255,0.65);
+  }
+  
+  .tech-tags {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+  }
+  
+  .tech-tag {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.15rem 0.5rem;
+	border: 1px solid rgba(124, 247, 198, 0.35);
+	background: rgba(124, 247, 198, 0.06);
+	color: rgba(124, 247, 198, 0.95);
+  }
+  
+  .tech-tag:hover {
+	border-color: rgba(124, 247, 198, 0.65);
+  }
+  
+  .tech-post-content p,
+  .tech-post-content li {
+	line-height: 1.75;
+  }
+  
+  .tech-post-content h2,
+  .tech-post-content h3 {
+	margin-top: 2rem;
+	line-height: 1.2;
+  }
+  
+  .tech-post-content blockquote {
+	margin: 1.5rem 0;
+	padding: 0.75rem 1rem;
+	border-left: 4px solid rgba(124, 247, 198, 0.65);
+	background: rgba(255,255,255,0.02);
+	color: rgba(255,255,255,0.85);
+  }
+  
+  .tech-post-content code {
+	font-family: var(--font-family-monospace, monospace);
+	padding: 0.1rem 0.35rem;
+	border: 1px solid rgba(255,255,255,0.14);
+	background: rgba(0,0,0,0.25);
+	border-radius: 6px;
+  }
+  
+  .tech-post-content pre {
+	border: 1px solid rgba(255,255,255,0.14);
+	background: rgba(0,0,0,0.35);
+	padding: 1rem;
+  }
+  
+  .tech-nextprev {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.75rem;
+	margin-top: 2rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  
+  .tech-navcard {
+	display: block;
+	text-decoration: none;
+	padding: 1rem;
+	border: 1px solid rgba(255,255,255,0.12);
+	background: rgba(255,255,255,0.02);
+  }
+  
+  .tech-navcard-right {
+	text-align: right;
+  }
+  
+  .tech-navlabel {
+	display: block;
+	font-family: var(--font-family-monospace, monospace);
+	font-size: 0.85rem;
+	color: rgba(255,255,255,0.65);
+	margin-bottom: 0.35rem;
+  }
+  
+  .tech-navtitle {
+	display: block;
+	color: rgba(255,255,255,0.9);
+	line-height: 1.3;
+  }
+  
+  @media (max-width: 700px) {
+	.tech-nextprev {
+	  grid-template-columns: 1fr;
+	}
+  }
