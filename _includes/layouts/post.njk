@@ -1,27 +1,48 @@
 ---
 layout: layouts/base.njk
 ---
-{# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
+
+{# Only include the post CSS on blog posts #}
 <style>{% include "css/style.css" %}</style>
 <h1>{{ title }}</h1>
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+    <div class="tech-post-meta">
+      <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 
-{{ content | safe }}
+      {%- if tags %}
+      <span class="tech-tags">
+        {%- for tag in tags | filterTagList %}
+          {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+          <a href="{{ tagUrl }}" class="tech-tag">#{{ tag }}</a>
+        {%- endfor %}
+      </span>
+      {%- endif %}
+    </div>
+  </header>
 
-{%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li class="links-nextprev-prev">← Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li class="links-nextprev-next">Next →<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-{%- endif %}
+  <div class="tech-post-content">
+    {{ content | safe }}
+  </div>
+
+  {%- if collections.posts %}
+    {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+    {%- set nextPost = collections.posts | getNextCollectionItem %}
+    {%- if nextPost or previousPost %}
+      <nav class="tech-nextprev" aria-label="Post navigation">
+        {%- if previousPost %}
+          <a class="tech-navcard" href="{{ previousPost.url }}">
+            <span class="tech-navlabel">← Previous</span>
+            <span class="tech-navtitle">{{ previousPost.data.title }}</span>
+          </a>
+        {%- endif %}
+
+        {%- if nextPost %}
+          <a class="tech-navcard tech-navcard-right" href="{{ nextPost.url }}">
+            <span class="tech-navlabel">Next →</span>
+            <span class="tech-navtitle">{{ nextPost.data.title }}</span>
+          </a>
+        {%- endif %}
+      </nav>
+    {%- endif %}
+  {%- endif %}
+</article>

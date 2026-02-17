@@ -6,4 +6,5 @@ const eleventyNavigation = {
 ---
 # About
 
-I am a person that writes stuff.
+My name is Daniel Ologunleko. I am a Hunter College student who is majoring in media studies Emerging media.
+

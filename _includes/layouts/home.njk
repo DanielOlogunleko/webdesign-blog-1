@@ -2,21 +2,39 @@
 layout: layouts/base.njk
 ---
 
-<section class="home-hero">
-  <h1 class="home-title">{{ metadata.title }}</h1>
-  <p class="home-subtitle">{{ metadata.description }}</p>
+{# Include the homepage CSS bundle #}
+<style>{% include "css/index.css" %}</style>
+
+<section class="tech-hero">
+
+
+  <h1 class="tech-title">{{ metadata.title }}</h1>
+
+  <p class="tech-subtitle">{{ metadata.description }}</p>
+
+  <div class="tech-stats">
+    <span class="tech-pill">theme: tech</span>
+    <span class="tech-pill">stack: 11ty + nunjucks + css</span>
+  </div>
 </section>
 
-<section class="home-grid">
+<section class="tech-grid" aria-label="Latest posts">
   {% for post in collections.posts | reverse %}
-    <a class="post-card" href="{{ post.url }}">
-      <h2 class="post-card-title">{{ post.data.title }}</h2>
-      <p class="post-card-meta">{{ post.date | date("MMMM d, yyyy") }}</p>
+    <a class="tech-card" href="{{ post.url }}">
+      <div class="tech-card-top">
+        <span class="tech-chip">post</span>
+        <time class="tech-date" datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | readableDate }}
+        </time>
+      </div>
+
+      <h2 class="tech-card-title">{{ post.data.title }}</h2>
+
       {% if post.data.description %}
-        <p class="post-card-excerpt">{{ post.data.description }}</p>
+        <p class="tech-card-desc">{{ post.data.description }}</p>
+      {% else %}
+        <p class="tech-card-desc">No description set yet. (Add one to the post front matter.)</p>
       {% endif %}
     </a>
   {% endfor %}
 </section>
-
-{{ content | safe }}
