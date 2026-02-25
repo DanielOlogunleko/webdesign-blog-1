@@ -13,3 +13,6 @@ We decided that for this project, we would uise the second approach: using exist
 
 # Partner Blog Link
 [View Partner blog](https://itznotisrael.github.io/web-design-blog-starter/blog/project2/)
+
+# Role
+My role would be that of a front-end developer. 
