@@ -9,4 +9,7 @@ date: 2026-02-24
 
 
 # Approach
-We decided that for this project, we would uise the second approach: using existing APIs for a non-intended purpose. We will combine the three api's we found:  the Animechan API, Wizard World API, and FIFA Ultimate Team API to create an interactive data experience.
+We decided that for this project, we would uise the second approach: using existing APIs for a non-intended purpose. We will combine the two api's we found:  the Animechan API and Wizard World API to create an interactive data experience.
+
+# Partner Blog Link
+[View Partner blog](https://itznotisrael.github.io/web-design-blog-starter/blog/project2/)
