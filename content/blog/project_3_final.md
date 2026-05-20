@@ -9,10 +9,10 @@ Resources link: [View Resource link](https://docs.google.com/document/d/1Nw4WcD2
 
 Github repository: [Github repo](https://github.com/legenddoros/utopia-project-3)
 
-My Group Member blog: [View Partner blog](https://shasunal.github.io/shasunagarden/)
+My Group Member blog: [Shasuna Blog](https://shasunal.github.io/shasunagarden/)
 
 Live Site: [Live Site](http://157.245.213.253:3000/)
 
 
 ## My Contribution #
-I worked on the front-end of our project. I added the audio for the heaven page. As well as the css, js, and html. 
+For this project I worked on the front-end aspect , specifically focusing on the Heaven page experience. I contributed to the CSS, JavaScript, and HTML to help improve the overall atmosphere and interaction of the page. One of my main responsibilities was implementing ambient audio to make the environment feel more immersive and emotionally engaging for users. I added a looping Heaven soundtrack along with an audio toggle button that allows users to enable or disable the sound while interacting with the page. I also styled the audio controls so they matched the aesthetic of the Heaven environment and blended naturally into the interface. I was also incharge of putting together the list of resources and prompt used in creating the images we used, the sounds used, and any external resources.  
